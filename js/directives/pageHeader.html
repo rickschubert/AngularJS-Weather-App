@@ -1,0 +1,7 @@
+<div id="home-template" class="jumbotron" ng-controller="HomeController">
+    <h1 class="display-7 text-center">How's the weather, Mr. Angular?</h1>
+    <form ng-submit="fetchWeather()" class="input-group">
+        <input type="text" class="form-control" name="location" ng-model="location">
+        <input class="btn btn-primary" type="submit" id="submit" value="Submit" />
+    </form>
+</div>

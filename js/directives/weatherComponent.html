@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title">{{ locationInfos.place }}</h2>
+    </div>
+    <div class="card-body">
+        <canvas id="icon1" width="60" height="60"></canvas>
+        <p class="card-text" ng-show="weatherInfos.temperature">
+            {{ getTemperature() }} {{ unitsAreMetric ? "°C" : "F" }}, feels like {{ weatherInfos.apparentTemperature | tempConverter: unitsAreMetric }}
+        </p>
+        <p class="card-text" ng-show="weatherInfos.summary">
+            {{ weatherInfos.summary }}
+        </p>
+        <p class="card-text" ng-show="weatherInfos.precipProbability">
+            Probability of rain: {{ weatherInfos.precipProbability }} %
+        </p>
+        <p class="card-text" ng-show="weatherInfos.windSpeed">
+            Wind speed: {{ weatherInfos.windSpeed | speedConverter: unitsAreMetric }}
+            </p>
+        <p class="card-text" ng-show="weatherInfos.time">
+            (As of {{ weatherInfos.time }} local time.)
+        </p>
+        <p class="card-text" ng-show="locationInfos.lat && locationInfos.lng">
+            Coordinates: {{ locationInfos.lat}}, {{ locationInfos.lng }}
+        </p>
+        <input type="checkbox" name="unitsAreMetric" id="unitsAreMetric" ng-model="unitsAreMetric"> Toggle Units
+    </div>
+</div>
