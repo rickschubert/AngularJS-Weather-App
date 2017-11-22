@@ -6,7 +6,7 @@ app.factory(
             asyncGet: function(place) {
                 const promise = $http({
                     method: "GET",
-                    url: "https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCmt2o0YgABB4atou_eZiBuwTFqbxXFYn4",
+                    url: "https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyCmt2o0YgABB4atou_eZiBuwTFqbxXFYn4",
                     params: {
                         address: place
                     }

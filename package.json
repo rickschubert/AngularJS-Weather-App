@@ -2,9 +2,14 @@
   "dependencies": {
     "angular": "^1.6.6",
     "angular-route": "^1.6.6",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
     "live-server": "^1.2.0",
     "moment": "^2.19.2",
     "moment-timezone": "^0.5.14",
     "skycons": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node server/index.js"
   }
 }

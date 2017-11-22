@@ -5,7 +5,7 @@ app.factory(
             asyncGet: function(lat, lng) {
                 const promise = $http({
                     method: "GET",
-                    url: `https://api.darksky.net/forecast/f1a824d7a7df7fc6b0acaca9fa2c7847/${lat},${lng}?&units=si`
+                    url: `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/f1a824d7a7df7fc6b0acaca9fa2c7847/${lat},${lng}?&units=si`
                 })
                 .then(
                     function(response) {
